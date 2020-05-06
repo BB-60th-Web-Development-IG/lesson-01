@@ -1,50 +1,443 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>Web Development Lesson 1</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/blood.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Web Development: Lesson #1</h2>
+          <p>Hanming</p>
+          <small
+            ><em
+              >Slides developed with reference to CS50W and Shay Howe</em
+            ></small
+          >
+        </section>
 
-		<script src="js/reveal.js"></script>
+        <section style="text-align: left;">
+          <h4>Brief Introduction About Myself</h4>
+          <ul style="font-size: 2rem;">
+            <li>I was the Band Major back in 2013.</li>
+            <li>I served as a Primer from 2015-2016.</li>
+            <li>Currently pursuing a Computer Science degree.</li>
+            <li>
+              Also building web and mobile applications for my own startup.
+            </li>
+            <li>
+              Some of my more notable projects:
+              <a
+                href="https://www.hityourtargets.xyz"
+                target="_blank"
+                noreferrer
+                noopener
+                >[here]</a
+              >,
+              <a href="https://blog.joni.ai" target="_blank" noreferrer noopener
+                >[here]</a
+              >
+              and
+              <a
+                href="https://folio-hnr.netlify.com"
+                target="_blank"
+                noreferrer
+                noopener
+                >[here]</a
+              >.
+            </li>
+          </ul>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+        <section style="text-align: left;">
+          <h4>Why Web Development?</h4>
+          <ul style="font-size: 2rem;">
+            <li>Browsers are getting increasingly powerful</li>
+            <li>App fatigue</li>
+            <li>
+              Progressive Web Apps (PWA) - the next big thing
+              <ul>
+                <li>Examples: AliExpress, Twitter, Tinder</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          Let's get started!
+        </section>
+
+        <section>
+          Visual Studio Code (Recommended) / Sublime Text
+        </section>
+
+        <section>
+          <h4>How does the Internet work?</h4>
+          <img src="images/internet-comic.png" />
+        </section>
+
+        <section>
+          <h3>Protocols and Packets</h3>
+          <p>
+            Everytime we visit a website, a request for the files required to
+            load the website is made. This request goes through a few protocols
+            before reaching the server.
+          </p>
+          <p>
+            The server then sends us the data required, usually in individual
+            packets, and each packet will find its way to you.
+          </p>
+        </section>
+
+        <section>
+          <h3>What's in these packets?</h3>
+          <img src="images/all_logos.png" />
+        </section>
+
+        <section>
+          <p><strong>HTML:</strong> The content of the website</p>
+          <p><strong>CSS:</strong> The design of the website</p>
+          <p><strong>JS:</strong> The behaviour of the website</p>
+        </section>
+
+        <section>
+          <h3>Hypertext Markup Language (HTML)</h3>
+          <p>
+            Invented back in 1980 by Tim Berners-Lee for researchers to use.
+          </p>
+          <p>
+            Basically allows users to "tag" the content that they were sending
+            over the Internet.
+          </p>
+          <p>Current version: HTML5</p>
+        </section>
+
+        <section>
+          <h3>Cascading Style Sheets (CSS)</h3>
+          <p>
+            One of the many types of style sheets invented to help style HTML
+            files.
+          </p>
+          <p>
+            Allows users to style and dictate how their HTML pages should look
+            like.
+          </p>
+          <p>Current version: CSS3</p>
+        </section>
+
+        <section>
+          <h3>JavaScript (JS)</h3>
+          <p>
+            Created by Netscape to enable dynamic behaviour in their browser,
+            Navigator, back in 1995.
+          </p>
+          <p>
+            Allows users to add logic and behaviour to their websites.
+          </p>
+          <p>Not related to Java!</p>
+          <p>Most widely supported version: ES5</p>
+        </section>
+
+        <section>
+          <img src="images/logos.png" />
+        </section>
+
+        <section>
+          <h1>HTML</h1>
+        </section>
+
+        <section>
+          <h4>hello.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Hello, world!
+    &lt;/body&gt;
+&lt;/html&gt;
+							</code></pre>
+        </section>
+
+        <section>
+          <h4>Elements</h4>
+          <pre><code class="html" data-line-numbers>&lt;html&gt;
+					</code></pre>
+          <br />
+          <h4>Tags</h4>
+          <pre><code class="html" data-line-numbers>&lt;head&gt;&lt;/head&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>headings.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Second Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is the largest headline&lt;/h1&gt;
+        &lt;h2&gt;This is also a large headline&lt;/h2&gt;
+        &lt;h3&gt;This is a slightly smaller headline&lt;/h3&gt;
+        &lt;h4&gt;This is an even smaller headline&lt;/h4&gt;
+        &lt;h5&gt;This is the second-smallest headline&lt;/h5&gt;
+        &lt;h6&gt;This is the smallest headline&lt;/h6&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+							</code></pre>
+        </section>
+
+        <section>
+          <h4>lists.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Third Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        An Unordered List:
+        &lt;ul&gt;
+            &lt;li&gt;One Item&lt;/li&gt;
+            &lt;li&gt;Another Item&lt;/li&gt;
+            &lt;li&gt;Yet Another Item&lt;/li&gt;
+        &lt;/ul&gt;
+        An Ordered List:
+        &lt;ol&gt;
+            &lt;li&gt;First Item&lt;/li&gt;
+            &lt;li&gt;Second Item&lt;/li&gt;
+            &lt;li&gt;Third Item&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+							</code></pre>
+        </section>
+
+        <section>
+          <h4>image0.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Fourth Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src=&quot;cat.jpg&quot; /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>Attributes</h4>
+          <pre><code class="html" data-line-numbers>&lt;img src=&quot;cat.jpg&quot; /&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>image1.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Fifth Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src=&quot;cat.jpg&quot; height=&quot;300&quot; width=&quot;300&quot; /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;				
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>table.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Sixth Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Presidents&lt;/h1&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Prior office&lt;/th&gt;
+                &lt;th&gt;Years in office&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;S. R. Nathan&lt;/td&gt;
+                &lt;td&gt;Ambassador-at-Large&lt;/td&gt;
+                &lt;td&gt;1999 - 2011&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Tony Tan&lt;/td&gt;
+                &lt;td&gt;Deputy Prime Minister&lt;/td&gt;
+                &lt;td&gt;2011 - 2017&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>form.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Seventh Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Full Name&quot; name=&quot;name&quot; /&gt;
+            &lt;button&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>Document Object Model (DOM)</h4>
+          <div style="display: flex; align-items: center;">
+            <pre
+              style="width: 50%; margin-right: 1rem;"
+            ><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;title&gt;Document Object Model&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Document Object Model&lt;/h1&gt;
+        &lt;p&gt;Paragraph text with an &lt;a href=&quot;#&quot;&gt;anchor tag&lt;/a&gt;&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+            <img
+              src="images/dom_tree.gif"
+              width="50%"
+              height="50%"
+              height="auto"
+              style="margin-left: 1rem;"
+            />
+          </div>
+        </section>
+
+        <section>
+          <h4>Self-Closing Elements</h4>
+          <pre><code class="html" data-line-numbers>&lt;br /&gt;
+&lt;img src=&quot;cat.jpg&quot; /&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h4>Resources</h4>
+          <a
+            href="https://developer.mozilla.org/en-US/"
+            target="_blank"
+            noreferrer
+            noopener
+            >Mozilla Developer Network</a
+          >
+          <br />
+          <a
+            href="https://www.w3schools.com"
+            target="_blank"
+            noreferrer
+            noopener
+            >W3Schools</a
+          >
+          <br />
+          <br />
+          <h4>Code Validation</h4>
+          <a href="https://validator.w3.org" target="_blank" noreferrer noopener
+            >W3C Markup Validation</a
+          >
+        </section>
+
+        <section>
+          <h4>Sample "full" HTML template</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Template&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Content Here (This is a comment!) --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+        </section>
+
+        <section>
+          <h1>CSS</h1>
+        </section>
+
+        <section>
+          <h4>style0.html</h4>
+          <pre><code class="html" data-line-numbers>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Eighth Web Page!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 style=&quot;color: blue; text-align: center;&quot;&gt;Welcome to my web page!&lt;/h1&gt;
+        &lt;p&gt;Hello, world! This is a paragraph of text.&lt;/p&gt;
+        &lt;p&gt;This is another paragraph!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;            
+					</code></pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>
